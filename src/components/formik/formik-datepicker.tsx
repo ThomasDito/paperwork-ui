@@ -22,7 +22,7 @@ const FormikDatePicker: React.FC<
 
   return (
     <fieldset key={props.key} className="space-y-2">
-      <Label htmlFor={id}>
+      <Label htmlFor={id} className="block">
         {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
       </Label>
       <DatePicker
