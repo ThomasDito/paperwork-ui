@@ -1,0 +1,19 @@
+{
+  "jsc": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src"]
+    },
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "target": "es5",
+    "loose": true
+  },
+  "module": {
+    "type": "es6"
+  },
+  "minify": true,
+  "isModule": true
+}
