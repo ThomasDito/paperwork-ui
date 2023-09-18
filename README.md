@@ -2,7 +2,7 @@
 # Paperwork - UI
 
 
-## Installation ⚙️
+## 🧰 Installation
 
 1. Clone the repository
 
@@ -16,7 +16,7 @@
       npm install 
     ```
 
-## Usage
+## 👀 Usage
 
 1. Build the Project
 
@@ -30,7 +30,13 @@
       npm install ../paperwork-ui/dist  
     ```
 
-## Configuration
+3. Import global styles
+  
+    ```js
+      import "paperwork-ui/index.min.css";
+    ```
+
+## ⚙️ Configuration
 
 1. Google Fonts
 
