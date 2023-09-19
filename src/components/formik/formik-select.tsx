@@ -23,9 +23,11 @@ const FormikSelect: React.FC<InputProps & FieldHookConfig<any>> = ({
 
   return (
     <fieldset key={props.key} className="space-y-2">
-      <Label htmlFor={props.id}>
-        {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
-      </Label>
+      {label && (
+        <Label htmlFor={props.id}>
+          {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
+        </Label>
+      )}
       <Select
         onValueChange={(value) => helpers.setValue(value)}
         onOpenChange={() => helpers.setTouched(true)}
@@ -46,7 +48,7 @@ const FormikSelect: React.FC<InputProps & FieldHookConfig<any>> = ({
       </Select>
 
       {meta.touched && meta.error && (
-        <span className="mt-2 text-xs text-destructive">{meta.error?.toString()}</span>
+        <span className="text-xs text-destructive">{meta.error?.toString()}</span>
       )}
     </fieldset>
   )

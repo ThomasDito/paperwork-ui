@@ -29,9 +29,11 @@ const FormikComboBox: React.FC<InputProps & FieldHookConfig<any>> = ({
 
   return (
     <fieldset key={props.key} className="space-y-2">
-      <Label htmlFor={props.id}>
-        {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
-      </Label>
+      {label && (
+        <Label htmlFor={props.id}>
+          {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
+        </Label>
+      )}
 
       <ComboBox
         open={open}
@@ -50,7 +52,7 @@ const FormikComboBox: React.FC<InputProps & FieldHookConfig<any>> = ({
       />
 
       {meta.touched && meta.error && (
-        <span className="mt-2 text-xs text-destructive">{meta.error?.toString()}</span>
+        <span className="text-xs text-destructive">{meta.error?.toString()}</span>
       )}
     </fieldset>
   )

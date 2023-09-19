@@ -22,9 +22,11 @@ const FormikDatePicker: React.FC<
 
   return (
     <fieldset key={props.key} className="space-y-2">
-      <Label htmlFor={id} className="block">
-        {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
-      </Label>
+      {label && (
+        <Label htmlFor={id} className="block">
+          {label} {props.required && <span className={cn("text-destructive font-bold")}>*</span>}
+        </Label>
+      )}
       <DatePicker
         {...DatePickerProps}
         ButtonProps={{ ...ButtonProps, id }}
@@ -39,7 +41,7 @@ const FormikDatePicker: React.FC<
       />
 
       {meta.touched && meta.error && (
-        <span className="mt-2 text-xs text-destructive">{meta.error?.toString()}</span>
+        <span className="text-xs text-destructive">{meta.error?.toString()}</span>
       )}
     </fieldset>
   )
