@@ -9,11 +9,13 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground font-semibold border border-primary hover:bg-primary-100 hover:text-primary-foreground focus:bg-transparent focus:text-primary-foreground focus:ring-warning-300 focus:ring-2 focus:bg-primary-150 focus:border-transparent active:text-primary-foreground active:bg-primary-20 active:ring-transparent active:border-primary-200 disabled:text-dark-grey disabled:border-[#E7E8E9] disabled:font-semibold disabled:bg-[#E7E8E9]",
+          "bg-primary text-primary-foreground border border-primary hover:bg-primary-100 hover:text-primary-foreground focus:bg-transparent focus:text-primary-foreground focus:ring-warning-300 focus:ring-2 focus:bg-primary-150 focus:border-transparent active:text-primary-foreground active:bg-primary-20 active:ring-transparent active:border-primary-200 disabled:text-dark-grey disabled:border-silver disabled:bg-silver",
         secondary:
-          "bg-transparent font-semibold border border-primary text-primary hover:bg-primary-100 hover:text-primary-foreground focus:bg-transparent focus:text-primary-150 focus:ring-warning-300 focus:ring-2 focus:bg-transparent focus:border-transparent active:text-primary-200 active:bg-transparent active:ring-transparent active:border-primary-200 disabled:text-light-grey disabled:border-light-grey disabled:font-semibold",
+          "bg-transparent border border-primary text-primary hover:bg-primary-100 hover:text-primary-foreground focus:bg-transparent focus:text-primary-150 focus:ring-warning-300 focus:ring-2 focus:bg-transparent focus:border-transparent active:text-primary-200 active:bg-transparent active:ring-transparent active:border-primary-200 disabled:text-light-grey disabled:border-light-grey",
         tertiary:
-          "bg-transparent font-semibold border border-primary text-primary hover:bg-primary-100 hover:text-primary-foreground focus:bg-transparent focus:text-primary-150 focus:ring-warning-300 focus:ring-2 focus:bg-transparent focus:border-transparent active:text-primary-200 active:bg-transparent active:ring-transparent disabled:text-light-grey disabled:border-transparent disabled:font-semibold",
+          "bg-transparent border border-primary text-primary hover:bg-primary-100 hover:text-primary-foreground focus:bg-transparent focus:text-primary-150 focus:ring-warning-300 focus:ring-2 focus:bg-transparent focus:border-transparent active:text-primary-200 active:bg-transparent active:ring-transparent disabled:text-light-grey disabled:border-transparent",
+        gradient:
+          "bg-gradient-to-r from-primary shadow-xl shadow-primary/20 to-rose-pink text-primary-foreground border border-transparent disabled:text-dark-grey disabled:bg-none   disabled:shadow disabled:shadow-foreground/10 disabled:border-silver disabled:bg-silver",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",

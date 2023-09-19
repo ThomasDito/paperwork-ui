@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
+import type { Config } from "tailwindcss"
+import defaultTheme from "tailwindcss/defaultTheme"
 import colors from "tailwindcss/colors"
 
 export default {
@@ -42,6 +42,9 @@ export default {
         // black:{
         //   DEFAULT: "hsl(var(--black, 0 0% 13%))",
         // },
+        "rose-pink": {
+          DEFAULT: "hsl(var(--rose-pink, 342 99% 71%))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
