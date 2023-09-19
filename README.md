@@ -13,6 +13,7 @@
 2. Go to project directory, and install dependencies
 
     ```bash
+      cd paperwork-ui
       npm install 
     ```
 
@@ -30,16 +31,35 @@
       npm install ../paperwork-ui/dist  
     ```
 
-3. Import global styles
+3. Import global styles in your project
   
     ```js
       import "paperwork-ui/index.min.css";
     ```
 
+4. Add Theme Provider to your project
+
+    ```js
+      import React from "react";
+      import ReactDOM from "react-dom/client";
+      import App from "./App.tsx";
+      import "@/styles/globals.css";
+      import { ThemeProvider } from "paperwork-ui";
+      import "paperwork-ui/index.min.css";
+
+      ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+        <React.StrictMode>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </React.StrictMode>
+      );
+
+    ```
 ## ⚙️ Configuration
 
 1. Google Fonts
-
+   
     ```html
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
