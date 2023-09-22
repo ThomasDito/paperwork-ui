@@ -4,8 +4,6 @@ export * from "./components/ui/alert-dialog";
 export * from "./components/ui/alert";
 export * from "./components/ui/avatar";
 export * from "./components/ui/badge";
-export * from "./components/ui/badge-review-status";
-export * from "./components/ui/badge-status";
 export * from "./components/ui/button";
 export * from "./components/ui/calendar";
 export * from "./components/ui/card";
@@ -32,6 +30,13 @@ export * from "./components/ui/table";
 export * from "./components/ui/tabs";
 export * from "./components/ui/textarea";
 export * from "./components/ui/toast";
+
+// widget 
+export * from "./components/widget/badge";
+
+// partial 
+export * from "./components/partial/breadcrumbs";
+export * from "./components/partial/pagination";
 
 // formik
 export * from "./components/formik/formik-combobox";

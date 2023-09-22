@@ -28,7 +28,7 @@ const badgeLabel: Record<OrganizationStatus, string> = {
   revised: "Revisi",
 };
 
-export type BadgeStatusProps = React.HTMLAttributes<HTMLSpanElement> & {
+export type BadgeStatusProps = React.HTMLAttributes<HTMLDivElement> & {
   organization_status: OrganizationStatus;
 };
 
@@ -38,12 +38,12 @@ function BadgeStatus({
   ...props
 }: BadgeStatusProps) {
   return (
-    <span
+    <div
       className={badgeVariants({ variant: organization_status, className })}
       {...props}
     >
       {badgeLabel[organization_status]}
-    </span>
+    </div>
   );
 }
 

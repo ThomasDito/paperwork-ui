@@ -25,7 +25,7 @@ const badgeLabel: Record<OrganizationReviewStatus, string> = {
 };
 
 export interface BadgeReviewStatusProps
-  extends React.HTMLAttributes<HTMLSpanElement> {
+  extends React.HTMLAttributes<HTMLDivElement> {
   organization_review_status: OrganizationReviewStatus;
 }
 
@@ -42,7 +42,7 @@ function BadgeReviewStatus({
       })}
       {...props}
     >
-      <span>{badgeLabel[organization_review_status]}</span>
+      {badgeLabel[organization_review_status]}
     </div>
   );
 }
