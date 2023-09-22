@@ -21,8 +21,8 @@
   --success-200: 160 100% 29%;
   --success-250: 160 61% 27%;
   --success-300: 160 69% 21%;
-  --success: var(--success-200, 160 60% 49%);
-  --success-foreground: 222.2 84% 4.9%;
+  --success: var(--success-150, 160 60% 49%);
+  --success-foreground: var(--black);
 
   --warning-50: 38 100% 96%;
   --warning-100: 36 100% 79%;
@@ -30,8 +30,8 @@
   --warning-200: 36 100% 63%;
   --warning-250: 36 100% 57%;
   --warning-300: 36 100% 45%;
-  --warning: var(--warning-200, 36 100% 72%);
-  --warning-foreground: 222.2 84% 4.9%;
+  --warning: var(--warning-150, 36 100% 72%);
+  --warning-foreground: var(--black);
 
   --danger-50: 5 100% 97%;
   --danger-100: 4 79% 72%;
@@ -39,8 +39,8 @@
   --danger-200: 4 77% 50%;
   --danger-250: 4 94% 45%;
   --danger-300: 4 68% 46%;
-  --danger: var(--danger-200, 4 100% 66%);
-  --warning-foreground: 222.2 84% 4.9%;
+  --danger: var(--danger-150, 4 100% 66%);
+  --danger-foreground: var(--black);
 
   /* Fonts */
   --font-fallbacks: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -51,17 +51,17 @@
   --background: 222 84% 98%;
   --foreground: 231 46% 31%;
 
-  --card: 0 0% 100%;
+  --card: var(--white);
   --card-foreground: 222.2 84% 4.9%;
 
-  --popover: 0 0% 100%;
+  --popover: var(--white);
   --popover-foreground: 222.2 84% 4.9%;
 
   --primary: var(--primary-50, 315 98% 47%);
-  --primary-foreground: 0 0% 100%;
+  --primary-foreground: var(--white);
 
   --secondary: 231 46% 31%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary-foreground: var(--white);
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -69,8 +69,8 @@
   --accent: 210 40% 96.1%;
   --accent-foreground: 215.4 16.3% 46.9%;
 
-  --destructive: var(--danger);
-  --destructive-foreground: 210 40% 98%;
+  --destructive: var(--danger-200);
+  --destructive-foreground: var(--white);
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
