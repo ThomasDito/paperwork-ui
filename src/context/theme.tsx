@@ -1,13 +1,13 @@
-import * as React from "react"
-import { Toaster } from "react-hot-toast"
+import * as React from "react";
+import { Toaster } from "react-hot-toast";
 
-const ThemeContext = React.createContext<null>(null)
-const useTheme = () => React.useContext(ThemeContext)
+const ThemeContext = React.createContext<null>(null);
+const useTheme = () => React.useContext(ThemeContext);
 
-ThemeContext.displayName = "ThemeProvider"
+ThemeContext.displayName = "ThemeProvider";
 
 interface ThemeProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 function ThemeProvider({ children }: ThemeProviderProps) {
@@ -16,7 +16,7 @@ function ThemeProvider({ children }: ThemeProviderProps) {
       {children}
       <Toaster />
     </ThemeContext.Provider>
-  )
+  );
 }
 
-export { ThemeContext, ThemeProvider, useTheme }
+export { ThemeContext, ThemeProvider, useTheme };

@@ -1,23 +1,31 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Calendar } from "@/components/ui/calendar"
-import { Button, ButtonProps } from "@/components/ui/button"
-import { CalendarIcon } from "lucide-react"
-import { DayPickerSingleProps, SelectSingleEventHandler } from "react-day-picker"
-import moment from "moment"
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { Button, ButtonProps } from "@/components/ui/button";
+import { CalendarIcon } from "lucide-react";
+import {
+  DayPickerSingleProps,
+  SelectSingleEventHandler,
+} from "react-day-picker";
+import moment from "moment";
 
 type InputProps = {
-  className?: string
-  placeholder?: string
-  onSelect?: SelectSingleEventHandler
-  onOpenChange?: (open: boolean) => void
-  selected?: Date
-  format?: string
-}
+  className?: string;
+  placeholder?: string;
+  onSelect?: SelectSingleEventHandler;
+  onOpenChange?: (open: boolean) => void;
+  selected?: Date;
+  format?: string;
+};
 
 const DatePicker: React.FC<
-  InputProps & Omit<DayPickerSingleProps, "mode"> & { ButtonProps?: ButtonProps }
+  InputProps &
+    Omit<DayPickerSingleProps, "mode"> & { ButtonProps?: ButtonProps }
 > = ({
   className,
   placeholder,
@@ -41,7 +49,7 @@ const DatePicker: React.FC<
             className,
           )}
         >
-          <CalendarIcon className="w-4 h-4 mr-2" />
+          <CalendarIcon className="mr-2 h-4 w-4" />
           {selected ? (
             moment(selected).format(format ?? "DD MMMM YYYY")
           ) : (
@@ -50,10 +58,17 @@ const DatePicker: React.FC<
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0" align="start">
-        <Calendar mode="single" selected={selected} onSelect={onSelect} {...props} id="hello" initialFocus />
+        <Calendar
+          mode="single"
+          selected={selected}
+          onSelect={onSelect}
+          {...props}
+          id="hello"
+          initialFocus
+        />
       </PopoverContent>
     </Popover>
-  )
-}
+  );
+};
 
-export { DatePicker }
+export { DatePicker };

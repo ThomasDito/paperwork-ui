@@ -1,5 +1,5 @@
-import * as React from "react"
-import { CheckmarkIcon, ErrorIcon, ToastOptions, toast } from "react-hot-toast"
+import * as React from "react";
+import { CheckmarkIcon, ErrorIcon, ToastOptions, toast } from "react-hot-toast";
 
 export function toastSuccess(message: string, option?: ToastOptions): void {
   toast.custom(
@@ -14,7 +14,7 @@ export function toastSuccess(message: string, option?: ToastOptions): void {
       </div>
     ),
     option,
-  )
+  );
 }
 
 export function toastError(message: string, option?: ToastOptions): void {
@@ -30,5 +30,5 @@ export function toastError(message: string, option?: ToastOptions): void {
       </div>
     ),
     option,
-  )
+  );
 }

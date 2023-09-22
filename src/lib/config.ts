@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss"
-import defaultTheme from "tailwindcss/defaultTheme"
-import colors from "tailwindcss/colors"
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+import colors from "tailwindcss/colors";
 
 export default {
   darkMode: ["class"],
@@ -57,6 +57,7 @@ export default {
         },
         success: {
           DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
           50: "hsl(var(--success-50, 160 53% 96%))",
           100: "hsl(var(--success-100, 160 59% 70%))",
           150: "hsl(var(--success-150, 160 60% 49%))",
@@ -66,6 +67,7 @@ export default {
         },
         warning: {
           DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
           50: "hsl(var(--warning-50, 38 100% 96%))",
           100: "hsl(var(--warning-100, 36 100% 79%))",
           150: "hsl(var(--warning-150, 36 100% 72%))",
@@ -75,6 +77,7 @@ export default {
         },
         danger: {
           DEFAULT: "hsl(var(--danger))",
+          foreground: "hsl(var(--danger-foreground))",
           50: "hsl(var(--danger-50, 5 100% 97%))",
           100: "hsl(var(--danger-100, 4 79% 72%))",
           150: "hsl(var(--danger-150, 4 100% 66%))",
@@ -122,7 +125,9 @@ export default {
       fontFamily: {
         ...defaultTheme.fontFamily,
         sans: [
-          `var(--font-sans, var(--font-fallbacks, ${defaultTheme.fontFamily.sans.join(", ")}))`,
+          `var(--font-sans, var(--font-fallbacks, ${defaultTheme.fontFamily.sans.join(
+            ", ",
+          )}))`,
         ],
       },
       keyframes: {
@@ -144,4 +149,4 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
