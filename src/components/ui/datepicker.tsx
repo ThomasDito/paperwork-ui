@@ -49,7 +49,7 @@ const DatePicker: React.FC<
             className,
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          <CalendarIcon className="w-4 h-4 mr-2" />
           {selected ? (
             moment(selected).format(format ?? "DD MMMM YYYY")
           ) : (
@@ -60,10 +60,12 @@ const DatePicker: React.FC<
       <PopoverContent className="w-auto p-0" align="start">
         <Calendar
           mode="single"
+          captionLayout="dropdown-buttons"
           selected={selected}
           onSelect={onSelect}
+          fromYear={1970}
+          toYear={2030}
           {...props}
-          id="hello"
           initialFocus
         />
       </PopoverContent>
