@@ -39,12 +39,6 @@ export * from "./components/widget/required";
 export * from "./components/partial/breadcrumbs";
 export * from "./components/partial/pagination";
 
-// formik
-export * from "./components/formik/formik-combobox";
-export * from "./components/formik/formik-datepicker";
-export * from "./components/formik/formik-input";
-export * from "./components/formik/formik-select";
-
 // context
 export * from "./context/theme";
 
