@@ -3,6 +3,7 @@ import { FieldHookConfig, useField } from "formik";
 import { cn } from "@/lib/utils";
 import { ComboBox } from "../ui/combobox";
 import { Label } from "../ui/label";
+import { Required } from "../widget/required";
 
 type InputProps = {
   className?: string;
@@ -30,10 +31,8 @@ const FormikComboBox: React.FC<InputProps & FieldHookConfig<string>> = ({
     <fieldset key={props.key} className="space-y-2">
       {label && (
         <Label htmlFor={props.id}>
-          {label}{" "}
-          {props.required && (
-            <span className={cn("text-destructive font-bold")}>*</span>
-          )}
+          {label}
+          {props.required && <Required />}
         </Label>
       )}
 

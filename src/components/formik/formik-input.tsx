@@ -3,6 +3,7 @@ import { useField } from "formik";
 import { cn } from "@/lib/utils";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import { Required } from "../widget/required";
 
 type InputProps = {
   name: string;
@@ -26,10 +27,7 @@ const FormikInput: React.FC<InputProps> = ({
     <fieldset key={props.key} className={cn("space-y-2", containerClassName)}>
       {label && (
         <Label htmlFor={props.id}>
-          {label}{" "}
-          {props.required && (
-            <span className={cn("text-destructive font-bold")}>*</span>
-          )}
+          {label}{props.required && <Required />}
         </Label>
       )}
       <Input
@@ -45,7 +43,7 @@ const FormikInput: React.FC<InputProps> = ({
       />
 
       {meta.touched && meta.error && (
-        <span className="text-destructive text-xs">
+        <span className="text-xs text-destructive">
           {meta.error?.toString()}
         </span>
       )}

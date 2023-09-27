@@ -5,6 +5,7 @@ import { DayPickerSingleProps } from "react-day-picker";
 import { ButtonProps } from "../ui/button";
 import { DatePicker } from "../ui/datepicker";
 import { Label } from "../ui/label";
+import { Required } from "../widget/required";
 
 type InputProps = {
   className?: string;
@@ -32,10 +33,8 @@ const FormikDatePicker: React.FC<
     <fieldset key={props.key} className="space-y-2">
       {label && (
         <Label htmlFor={id}>
-          {label}{" "}
-          {props.required && (
-            <span className={cn("text-destructive font-bold")}>*</span>
-          )}
+          {label}
+          {props.required && <Required />}
         </Label>
       )}
       <DatePicker

@@ -12,8 +12,7 @@
     "watch:ts": "swc -w ./src -D ./package.json -d ./dist",
     "watch:dts": "tsc -w -d --declarationMap --emitDeclarationOnly",
     "watch": "concurrently -n swc,tsc,postcss \"npm run watch:ts\" \"npm run watch:dts\" \"npm run watch:css\"",
-    "lint": "eslint src --ext ts,tsx,css --max-warnings=0",
-    "lint:fix": "eslint src --ext ts,tsx,css --fix",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write src/",
     "tsc": "tsc --pretty --noEmit"
   },

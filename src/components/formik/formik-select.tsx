@@ -9,6 +9,7 @@ import {
 } from "../ui/select";
 import { Label } from "../ui/label";
 import * as SelectPrimitive from "@radix-ui/react-select";
+import { Required } from "../widget/required";
 
 type InputProps = {
   className?: string;
@@ -30,10 +31,8 @@ const FormikSelect: React.FC<InputProps & FieldHookConfig<string>> = ({
     <fieldset key={props.key} className="space-y-2">
       {label && (
         <Label htmlFor={props.id}>
-          {label}{" "}
-          {props.required && (
-            <span className={cn("text-destructive font-bold")}>*</span>
-          )}
+          {label}
+          {props.required && <Required />}
         </Label>
       )}
       <Select

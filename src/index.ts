@@ -33,6 +33,7 @@ export * from "./components/ui/toast";
 
 // widget 
 export * from "./components/widget/badge";
+export * from "./components/widget/required";
 
 // partial 
 export * from "./components/partial/breadcrumbs";
