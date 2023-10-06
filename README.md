@@ -19,19 +19,25 @@
 
 ## 👀 Usage
 
-1. Install the Project Locally
+1. Build the Project
 
     ```bash
-      npm install ../paperwork-ui
+      npm build
     ```
 
-2. Import global styles in your project
+2. Install the Project Locally
+
+    ```bash
+      npm install ../paperwork-ui/dist  
+    ```
+
+3. Import global styles in your project
   
     ```js
       import "paperwork-ui/index.min.css";
     ```
 
-3. Add Theme Provider to your project
+4. Add Theme Provider to your project
 
     ```js
       import React from "react";
