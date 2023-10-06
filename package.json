@@ -1,8 +1,7 @@
 {
   "name": "paperwork-ui",
   "version": "1.0.0",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "src/index.ts",
   "scripts": {
     "build:ts": "swc ./src -D ./package.json -d ./dist",
     "build:dts": "tsc -d --declarationMap --emitDeclarationOnly",
