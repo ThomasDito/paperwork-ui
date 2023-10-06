@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PaginationMeta } from "paperwork-utils";
-import { cn } from "@/lib/utils";
+import { cn } from "../../../lib/utils";
 
 export type PaginationButtonProps = {
   pagination: PaginationMeta;

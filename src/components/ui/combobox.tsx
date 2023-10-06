@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 import { Button } from "./button";
 import {
@@ -50,18 +50,18 @@ const ComboBox: React.FC<InputProps> = ({
           className={cn("bg-card w-[300px] justify-between", className)}
           {...props}
         >
-          <div className="line-clamp-1 w-full text-left font-normal">
+          <div className="w-full font-normal text-left line-clamp-1">
             {selected
               ? values.find((item) => item.value === selected)?.label
               : placeholder ?? "Pilih item..."}
           </div>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="max-h-[20rem] w-auto max-w-[25rem] overflow-y-auto p-0 lg:max-w-[30rem]">
         <Command>
           <CommandInput placeholder={placeholderSearch ?? "Cari item..."} />
-          <CommandEmpty className="m-5 text-center text-sm">
+          <CommandEmpty className="m-5 text-sm text-center">
             {placeholderNotFound ?? "Item tidak ditemukan"}
           </CommandEmpty>
           <CommandGroup>

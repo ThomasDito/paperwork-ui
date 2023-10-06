@@ -21,9 +21,7 @@
     "sourceRoot": "src",
     "declarationMap": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
+    "paths": {},
     "typeRoots": ["./node_modules/@types"]
   }
 }
