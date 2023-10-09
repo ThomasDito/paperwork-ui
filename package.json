@@ -2,6 +2,7 @@
   "name": "paperwork-ui",
   "version": "1.0.0",
   "main": "index.js",
+  "types": "index.d.ts",
   "typings": "index.d.ts",
   "scripts": {
     "build:ts": "swc ./src -D ./package.json -d ./dist",

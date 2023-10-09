@@ -22,7 +22,7 @@
 1. Build the Project
 
     ```bash
-      npm build
+      npm run build // or npm run watch
     ```
 
 2. Install the Project Locally
