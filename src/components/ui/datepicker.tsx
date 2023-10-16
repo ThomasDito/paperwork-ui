@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils";
 import {
   Popover,
   PopoverContent,
@@ -62,6 +62,7 @@ const DatePicker: React.FC<
           mode="single"
           captionLayout="dropdown-buttons"
           selected={selected}
+          defaultMonth={new Date(selected ?? Date.now())}
           onSelect={onSelect}
           fromYear={1970}
           toYear={2030}
