@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Calendar, CalendarProps } from "react-big-calendar";
 import withDragAndDrop, { withDragAndDropProps } from "react-big-calendar/lib/addons/dragAndDrop";
+import { Toolbar } from "./toolbar";
 
 const DnDCalendar = withDragAndDrop(Calendar);
 export interface CalendarEventProps extends withDragAndDropProps, CalendarProps {}
@@ -18,6 +19,9 @@ export function CalendarEvent({ ...props }: CalendarEventProps) {
         week: false,
         day: false,
         agenda: true,
+      },
+      components: {
+        toolbar: Toolbar
       },
       className: "bg-card rounded-md p-4 py-6 shadow-sm max-h-[calc(24rem*2.2)]",
       style: {
