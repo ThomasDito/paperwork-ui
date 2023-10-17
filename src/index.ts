@@ -38,6 +38,7 @@ export * from "./components/widget/required";
 // partial 
 export * from "./components/partial/breadcrumbs";
 export * from "./components/partial/pagination";
+export * from "./components/partial/calendar-event";
 
 // context
 export * from "./context/theme";
