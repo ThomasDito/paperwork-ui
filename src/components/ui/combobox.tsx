@@ -16,8 +16,8 @@ type InputProps = {
   placeholder?: string;
   placeholderNotFound?: string;
   placeholderSearch?: string;
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
   onSelect: (value: string) => void;
   selected?: string;
   values: {
@@ -50,18 +50,18 @@ const ComboBox: React.FC<InputProps> = ({
           className={cn("bg-card w-[300px] justify-between", className)}
           {...props}
         >
-          <div className="w-full font-normal text-left line-clamp-1">
+          <div className="line-clamp-1 w-full text-left font-normal">
             {selected
               ? values.find((item) => item.value === selected)?.label
               : placeholder ?? "Pilih item..."}
           </div>
-          <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="max-h-[20rem] w-auto max-w-[25rem] overflow-y-auto p-0 lg:max-w-[30rem]">
         <Command>
           <CommandInput placeholder={placeholderSearch ?? "Cari item..."} />
-          <CommandEmpty className="m-5 text-sm text-center">
+          <CommandEmpty className="m-5 text-center text-sm">
             {placeholderNotFound ?? "Item tidak ditemukan"}
           </CommandEmpty>
           <CommandGroup>
@@ -70,7 +70,7 @@ const ComboBox: React.FC<InputProps> = ({
                 key={item.value}
                 onSelect={() => {
                   onSelect(item.value === selected ? "" : item.value);
-                  onOpenChange(false);
+                  onOpenChange?.(false);
                 }}
               >
                 <Check
