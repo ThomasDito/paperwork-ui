@@ -30,12 +30,13 @@ export * from "./components/ui/table";
 export * from "./components/ui/tabs";
 export * from "./components/ui/textarea";
 export * from "./components/ui/toast";
+export * from "./components/ui/phone-input";
 
-// widget 
+// widget
 export * from "./components/widget/badge";
 export * from "./components/widget/required";
 
-// partial 
+// partial
 export * from "./components/partial/breadcrumbs";
 export * from "./components/partial/pagination";
 export * from "./components/partial/calendar-event";
